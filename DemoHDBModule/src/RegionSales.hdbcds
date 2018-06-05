@@ -9,4 +9,10 @@ context RegionSales {
         Year       : String(4);
         Revenue    : Integer;
     };
-};
+
+    /*@@layout{"layoutInfo":{"x":-1487,"y":-185.5}}*/
+    entity Region {
+        Region     : String(10);
+        RegionName : String(50);
+    };
+};  
