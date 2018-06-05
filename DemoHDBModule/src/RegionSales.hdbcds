@@ -1,0 +1,12 @@
+namespace DemoMTAApp.DemoHDBModule;
+
+context RegionSales {
+
+    /*@@layout{"layoutInfo":{"x":-975,"y":-196.5}}*/
+    entity Sales {
+        CustomerID : String(10);
+        Region     : String(10);
+        Year       : String(4);
+        Revenue    : Integer;
+    };
+};

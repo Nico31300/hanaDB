@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="DemoMTAApp.DemoHDBModule::CV_Sales" applyPrivilegeType="NONE" dataCategory="CUBE" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="HOURLY" enforceSqlExecution="false">
+<descriptions defaultDescription="CV Sales"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="DemoMTAApp.DemoHDBModule::RegionSales.Sales">
+    <resourceUri>DemoMTAApp.DemoHDBModule::RegionSales.Sales</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="DemoMTAApp.DemoHDBModule::RegionSales.Sales">
+  <attributes>
+    <attribute id="CustomerID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CustomerID"/>
+      <keyMapping columnObjectName="RegionSales.Sales" columnName="CustomerID"/>
+    </attribute>
+    <attribute id="Region" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Region"/>
+      <keyMapping columnObjectName="RegionSales.Sales" columnName="Region"/>
+    </attribute>
+    <attribute id="Year" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Year"/>
+      <keyMapping columnObjectName="RegionSales.Sales" columnName="Year"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="Revenue" order="4" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Revenue"/>
+      <measureMapping columnObjectName="RegionSales.Sales" columnName="Revenue"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

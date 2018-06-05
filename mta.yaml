@@ -1,0 +1,16 @@
+ID: DemoMTAApp
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: DemoHDBModule
+   type: hdb
+   path: DemoHDBModule
+   requires:
+    - name: hdi_DemoHDBModule
+
+resources:
+ - name: hdi_DemoHDBModule
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
